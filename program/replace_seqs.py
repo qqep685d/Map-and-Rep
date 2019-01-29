@@ -61,7 +61,7 @@ for index, row in df.iterrows():
 with open(REF, 'r') as seq:
 	i = 1
 	for rec in SeqIO.parse(seq, 'fasta'):
-		rec.id = 'scaffolds_%03d.gap_NNN' % i
+		rec.id = 'scaffolds_%03d.filled_gaps_by_REF' % i
 		rec.description=""
 		rec.seq = Seq(str(sequence_typeR), IUPAC.ambiguous_dna)
 		SeqIO.write(rec, 'step4_tempR', "fasta")
@@ -71,7 +71,7 @@ with open(REF, 'r') as seq:
 with open(REF, 'r') as seq:
 	i = 1
 	for rec in SeqIO.parse(seq, 'fasta'):
-		rec.id = 'scaffolds_%04d.gap_REF' % i
+		rec.id = 'scaffolds_%04d.filled_gaps_by_NNN' % i
 		rec.description=""
 		# rec.seq = sequence_typeN
 		rec.seq = Seq(str(sequence_typeN), IUPAC.ambiguous_dna)
