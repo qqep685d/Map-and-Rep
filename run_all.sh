@@ -134,9 +134,9 @@ function run_step4_make_seqs(){
 #=====================================
 #=============== Main ================
 #=====================================
-# run_step1
-# run_step2
-# run_step3
+run_step1
+run_step2
+run_step3
 run_step4_make_seqs
 
 #=====================================
